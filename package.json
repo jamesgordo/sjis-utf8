@@ -1,12 +1,33 @@
 {
   "name": "sjis-utf8",
   "version": "1.0.0",
-  "description": "A Node CLI command to easily convert SJIS encoded files into readable UTF8 files.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "A small Node CLI for converting Shift-JIS encoded file into a UTF-8 encoded file.",
+  "bin": {
+    "sjis-utf8": "src/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "scripts": {
+    "lint": "eslint ./*.js",
+    "format:check": "prettier --check .",
+    "format:fix": "prettier --write ."
+  },
+  "keywords": [
+    "shift-jis",
+    "SJIS",
+    "utf8",
+    "converter",
+    "shiftjis-utf8"
+  ],
+  "author": "James Gordo",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "4.1.2",
+    "commander": "^11.0.0",
+    "detect-character-encoding": "^0.8.0",
+    "iconv-lite": "^0.6.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.1"
+  }
 }
