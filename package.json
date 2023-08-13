@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "A small Node CLI for converting Shift-JIS encoded file into a UTF-8 encoded file.",
   "bin": {
-    "sjis-utf8": "src/index.js"
+    "sjis-utf8": "./bin/index.js"
   },
   "scripts": {
     "lint": "eslint ./*.js",
     "format:check": "prettier --check .",
-    "format:fix": "prettier --write ."
+    "format:fix": "prettier --write .",
+    "test": "jest"
   },
   "keywords": [
     "shift-jis",
@@ -28,6 +29,11 @@
   "devDependencies": {
     "eslint": "^8.47.0",
     "eslint-config-prettier": "^9.0.0",
+    "jest": "^29.6.2",
     "prettier": "^3.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamesgordo/sjis-utf8.git"
   }
 }
