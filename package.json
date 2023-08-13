@@ -6,7 +6,7 @@
     "sjis-utf8": "./bin/index.js"
   },
   "scripts": {
-    "lint": "eslint ./*.js",
+    "lint": "eslint ./*/**.js",
     "format:check": "prettier --check .",
     "format:fix": "prettier --write .",
     "test": "jest"
