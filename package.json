@@ -1,6 +1,6 @@
 {
   "name": "sjis-utf8",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small Node CLI for converting Shift-JIS encoded file into a UTF-8 encoded file.",
   "bin": {
     "sjis-utf8": "./bin/index.js"

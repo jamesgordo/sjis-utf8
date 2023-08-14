@@ -5,7 +5,7 @@ const path = require("path");
 
 const sjisUtf8 = async (source, output, encoding = "UTF8") => {
   const input = fs.statSync(path.resolve(source));
-  const target = fs.statSync(path.resolve(output));
+  const target = output && fs.existsSync(path.resolve(output)) ? fs.statSync(path.resolve(output)) : null;
 
   if (input.isDirectory()) {
     throw Error(
@@ -19,7 +19,7 @@ const sjisUtf8 = async (source, output, encoding = "UTF8") => {
     let outputFilename =
       output ||
       path.resolve(inputDir, `converted-${source.split("/").slice(-1)[0]}`);
-    if (target.isDirectory())
+    if (target && target.isDirectory())
       outputFilename = path.resolve(
         path.resolve(output),
         `converted-${source.split("/").slice(-1)[0]}`
